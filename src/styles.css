@@ -1,0 +1,101 @@
+@import "tailwindcss" source("../");
+
+body {
+  @apply m-0;
+  font-family: 'Courier New', Consolas, 'Lucida Console', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
+}
+
+/* Animated grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 255, 159, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 159, 0.07) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+/* Neon text glow */
+.neon-text {
+  text-shadow:
+    0 0 7px #00ff9f,
+    0 0 10px #00ff9f,
+    0 0 21px #00ff9f;
+}
+
+.neon-text-hero {
+  color: #00ff9f;
+  text-shadow:
+    0 0 7px #00ff9f,
+    0 0 10px #00ff9f,
+    0 0 21px #00ff9f,
+    0 0 42px #00ff9f,
+    0 0 82px #00ff9f;
+}
+
+/* Cyber card with neon border glow */
+.cyber-card {
+  background: rgba(0, 255, 159, 0.03);
+  border: 1px solid rgba(0, 255, 159, 0.3);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 159, 0.8);
+  box-shadow:
+    0 0 10px rgba(0, 255, 159, 0.2),
+    0 0 20px rgba(0, 255, 159, 0.1),
+    inset 0 0 20px rgba(0, 255, 159, 0.05);
+  background: rgba(0, 255, 159, 0.05);
+}
+
+/* Primary button */
+.cyber-btn {
+  display: inline-block;
+  background: #00ff9f;
+  color: #000;
+  border: 2px solid #00ff9f;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.4);
+}
+
+.cyber-btn:hover {
+  background: #000;
+  color: #00ff9f;
+  box-shadow:
+    0 0 20px rgba(0, 255, 159, 0.6),
+    0 0 40px rgba(0, 255, 159, 0.3);
+}
+
+/* Outline button */
+.cyber-btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #00ff9f;
+  border: 2px solid rgba(0, 255, 159, 0.5);
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.cyber-btn-outline:hover {
+  background: #00ff9f;
+  color: #000;
+  border-color: #00ff9f;
+  box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+}
