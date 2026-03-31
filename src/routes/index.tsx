@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -34,12 +34,12 @@ function Home() {
             Jaringan proxy generasi berikutnya dengan kecerdasan buatan, analitik pasar real-time, dan otomatisasi penuh untuk masa depan digital.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#about"
+            <Link
+              to="/dashboard"
               className="cyber-btn px-10 py-4 text-sm tracking-widest font-bold"
             >
               MASUK SISTEM
-            </a>
+            </Link>
             <a
               href="#features"
               className="cyber-btn-outline px-10 py-4 text-sm tracking-widest font-bold"
@@ -232,9 +232,9 @@ function Home() {
           <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
             Bergabunglah dengan jutaan pengguna yang telah mempercayakan kebutuhan proxy mereka kepada ProxyVerse. Mulai gratis, tanpa kartu kredit.
           </p>
-          <a href="#" className="cyber-btn px-14 py-5 text-base tracking-widest font-black">
+          <Link to="/dashboard" className="cyber-btn px-14 py-5 text-base tracking-widest font-black">
             AKSES SEKARANG
-          </a>
+          </Link>
         </div>
       </section>
 
